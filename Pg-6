@@ -37,7 +37,7 @@ def summarizeByClass(dataset):
     return summaries
 
 def calculateProbability(x, mean, stdev):
-    exponent = math.exp((-(x-mean)*2)/(2(stdev**2)))
+    exponent = math.exp((-(x-mean)**2)/(2*(stdev**2)))
     return (1 / math.sqrt(2*math.pi*(stdev**2))) * exponent
 
 def predict(summaries, inputVector):
